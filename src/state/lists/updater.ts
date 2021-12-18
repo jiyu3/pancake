@@ -22,7 +22,8 @@ export default function Updater(): null {
   const activeListUrls = useActiveListUrls()
 
   // initiate loading
-  useAllInactiveTokens()
+  // 2021-12-18 jiyu modified
+  // useAllInactiveTokens()
 
   const fetchList = useFetchListCallback()
   const fetchAllListsCallback = useCallback(() => {

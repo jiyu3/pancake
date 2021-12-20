@@ -50,9 +50,12 @@ export type TokenAddressMap = Readonly<
 /**
  * An empty result, useful as a default.
  */
-const EMPTY_LIST: TokenAddressMap = {
-  [ChainId.MAINNET]: {},
-  [ChainId.TESTNET]: {},
+const EMPTY_LIST: any = {
+  // [ChainId.MAINNET]: {},
+  // [ChainId.TESTNET]: {},
+  81: {},
+  56: {},
+  97: {},
 }
 
 const listCache: WeakMap<TokenList, TokenAddressMap> | null =
@@ -64,7 +67,6 @@ export function listToTokenMap(list: TokenList): TokenAddressMap {
 
   const map = list.tokens.reduce<TokenAddressMap>(
     (tokenMap, tokenInfo) => {
-      console.info("tokenMap", tokenMap)
       const tags: TagInfo[] =
         tokenInfo.tags
           ?.map((tagId) => {
@@ -105,7 +107,7 @@ export function useAllLists(): {
 function combineMaps(map1: TokenAddressMap, map2: TokenAddressMap): TokenAddressMap {
   return {
     [ChainId.MAINNET]: { ...map1[ChainId.MAINNET], ...map2[ChainId.MAINNET] },
-    [ChainId.TESTNET]: { ...map1[ChainId.TESTNET], ...map2[ChainId.TESTNET] },
+    81: { ...map1[81], ...map2[81] },
   }
 }
 

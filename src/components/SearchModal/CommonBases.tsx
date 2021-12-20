@@ -43,7 +43,7 @@ export default function CommonBases({
         <QuestionHelper text={t('These tokens are commonly paired with other tokens.')} ml="4px" />
       </AutoRow>
       <AutoRow gap="auto">
-        <BaseWrapper
+        {/* <BaseWrapper
           onClick={() => {
             if (!selectedCurrency || !currencyEquals(selectedCurrency, ETHER)) {
               onSelect(ETHER)
@@ -62,7 +62,7 @@ export default function CommonBases({
               <Text>{token.symbol}</Text>
             </BaseWrapper>
           )
-        })}
+        })} */}
       </AutoRow>
     </AutoColumn>
   )

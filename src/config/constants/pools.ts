@@ -3275,6 +3275,22 @@ const pools: SerializedPoolConfig[] = [
     sortOrder: 999,
     isFinished: true,
   },
+  // 2021-12-18 jiyu added
+  {
+    sousId: 6,
+    stakingToken: serializedTokens.cake,
+    earningToken: serializedTokens.inj,
+    contractAddress: {
+      81: '0xcaBe46d81802c7Df1518A41f86dd9045B76B4a03',
+      56: '',
+    },
+    poolCategory: PoolCategory.CORE,
+    harvest: true,
+    tokenPerBlock: '0.25',
+    sortOrder: 999,
+    isFinished: true,
+  },
+
 ]
 
 export default pools

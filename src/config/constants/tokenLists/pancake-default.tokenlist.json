@@ -9,7 +9,25 @@
   "tags": {},
   "logoURI": "https://pancakeswap.finance/logo.png",
   "keywords": ["pancake", "default"],
+  "comment": "2021-12-18 jiyu added",
   "tokens": [
+    {
+      "name": "Raichi Token",
+      "symbol": "RCH",
+      "address": "0x5FA712069F62c62eA73a7F8e2A4bdec11c2BfeF7",
+      "chainId": 81,
+      "decimals": 18,
+      "logoURI": "https://pancakeswap.finance/images/tokens/0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c.png"
+    },
+    {
+      "name": "Tanuma Token",
+      "symbol": "TNM",
+      "address": "0xbeA0552A62Ff4A1716aF885Dd1A3Bc15C71ae301",
+      "chainId": 81,
+      "decimals": 18,
+      "logoURI": "https://pancakeswap.finance/images/tokens/0xe9e7cea3dedca5984780bafc599bd69add087d56.png"
+    },
+
     {
       "name": "WBNB Token",
       "symbol": "WBNB",

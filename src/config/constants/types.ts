@@ -10,8 +10,11 @@ export type TranslatableText =
       }
     }
 export interface Address {
+  // 2021-12-20 jiyu modified
   97?: string
   56: string
+  // 2021-12-18 jiyu added
+  81?: string // Shibuya Network
 }
 
 export interface SerializedToken {

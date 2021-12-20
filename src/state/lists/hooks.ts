@@ -64,6 +64,7 @@ export function listToTokenMap(list: TokenList): TokenAddressMap {
 
   const map = list.tokens.reduce<TokenAddressMap>(
     (tokenMap, tokenInfo) => {
+      console.info("tokenMap", tokenMap)
       const tags: TagInfo[] =
         tokenInfo.tags
           ?.map((tagId) => {

@@ -171,9 +171,9 @@ export default function Updater(): null {
 
     const chunkedCalls = chunkArray(calls, CALL_CHUNK_SIZE)
 
-    if (cancellations.current?.blockNumber !== currentBlock) {
-      cancellations.current?.cancellations?.forEach((c) => c())
-    }
+    // if (cancellations.current?.blockNumber !== currentBlock) {
+    //   cancellations.current?.cancellations?.forEach((c) => c())
+    // }
 
     dispatch(
       fetchingMulticallResults({

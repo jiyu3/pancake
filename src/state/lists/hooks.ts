@@ -104,7 +104,7 @@ export function useAllLists(): {
   return useSelector<AppState, AppState['lists']['byUrl']>((state) => state.lists.byUrl)
 }
 
-function combineMaps(map1: TokenAddressMap, map2: TokenAddressMap): TokenAddressMap {
+function combineMaps(map1: TokenAddressMap, map2: TokenAddressMap): any {
   return {
     [ChainId.MAINNET]: { ...map1[ChainId.MAINNET], ...map2[ChainId.MAINNET] },
     81: { ...map1[81], ...map2[81] },

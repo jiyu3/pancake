@@ -5,7 +5,7 @@ import { getErc721Contract } from 'utils/contractHelpers'
 import { ethers } from 'ethers'
 import map from 'lodash/map'
 import { uniq } from 'lodash'
-import { pancakeBunniesAddress } from 'views/Nft/market/constants'
+// import { pancakeBunniesAddress } from 'views/Nft/market/constants'
 import {
   ApiCollection,
   ApiCollections,
@@ -73,7 +73,8 @@ export const getNftsFromCollectionApi = async (
   size = 100,
   page = 1,
 ): Promise<ApiResponseCollectionTokens> => {
-  const isPBCollection = collectionAddress.toLowerCase() === pancakeBunniesAddress.toLowerCase()
+  // const isPBCollection = collectionAddress.toLowerCase() === pancakeBunniesAddress.toLowerCase()
+  const isPBCollection = null
   const requestPath = `${API_NFT}/collections/${collectionAddress}/tokens${
     !isPBCollection ? `?page=${page}&size=${size}` : ``
   }`
@@ -198,8 +199,8 @@ export const getNftsFromCollectionSg = async (
   skip = 0,
 ): Promise<TokenMarketData[]> => {
   // Squad to be sorted by tokenId as this matches the order of the paginated API return. For PBs - get the most recent,
-  const isPBCollection = collectionAddress.toLowerCase() === pancakeBunniesAddress.toLowerCase()
-
+  // const isPBCollection = collectionAddress.toLowerCase() === pancakeBunniesAddress.toLowerCase()
+  const isPBCollection = null
   try {
     const res = await request(
       GRAPH_API_NFTMARKET,
@@ -248,7 +249,8 @@ export const getNftsByBunnyIdSg = async (
         }
       `,
       {
-        collectionAddress: pancakeBunniesAddress.toLowerCase(),
+        // collectionAddress: pancakeBunniesAddress.toLowerCase(),
+        collectionAddress: "0xc808592e5b4585f982bc728d63b227634bc007a4".toLowerCase(),
         where,
         orderDirection,
       },
@@ -701,7 +703,8 @@ export const combineApiAndSgResponseToNftToken = (
     name: apiMetadata.name,
     description: apiMetadata.description,
     collectionName: apiMetadata.collection.name,
-    collectionAddress: pancakeBunniesAddress,
+    // collectionAddress: pancakeBunniesAddress,
+    collectionAddress: "0xc808592e5b4585f982bc728d63b227634bc007a4",
     image: apiMetadata.image,
     marketData,
     attributes,

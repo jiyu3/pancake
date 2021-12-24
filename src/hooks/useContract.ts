@@ -14,7 +14,7 @@ import {
   getSouschefContract,
   getClaimRefundContract,
   getTradingCompetitionContract,
-  getTradingCompetitionContractV2,
+  // getTradingCompetitionContractV2,
   getEasterNftContract,
   getErc721Contract,
   getCakeVaultContract,
@@ -46,7 +46,7 @@ import { ERC20_BYTES32_ABI } from '../config/abi/erc20'
 import ERC20_ABI from '../config/abi/erc20.json'
 import WETH_ABI from '../config/abi/weth.json'
 import multiCallAbi from '../config/abi/Multicall.json'
-import { getContract, getProviderOrSigner } from '../utils'
+// import { getContract, getProviderOrSigner } from '../utils'
 
 /**
  * Helper hooks to get specific contracts (by ABI)
@@ -135,13 +135,13 @@ export const useTradingCompetitionContract = () => {
   return useMemo(() => getTradingCompetitionContract(library.getSigner()), [library])
 }
 
-export const useTradingCompetitionContractV2 = (withSignerIfPossible = true) => {
-  const { library, account } = useActiveWeb3React()
-  return useMemo(
-    () => getTradingCompetitionContractV2(withSignerIfPossible ? getProviderOrSigner(library, account) : null),
-    [library, withSignerIfPossible, account],
-  )
-}
+// export const useTradingCompetitionContractV2 = (withSignerIfPossible = true) => {
+//   const { library, account } = useActiveWeb3React()
+//   return useMemo(
+//     () => getTradingCompetitionContractV2(withSignerIfPossible ? getProviderOrSigner(library, account) : null),
+//     [library, withSignerIfPossible, account],
+//   )
+// }
 
 export const useEasterNftContract = () => {
   const { library } = useActiveWeb3React()
@@ -232,10 +232,12 @@ export const useErc721CollectionContract = (collectionAddress: string, withSigne
   const { library, account } = useActiveWeb3React()
   return useMemo(() => {
     return getErc721CollectionContract(
-      withSignerIfPossible ? getProviderOrSigner(library, account) : null,
+      // withSignerIfPossible ? getProviderOrSigner(library, account) : null,
+      withSignerIfPossible ? null : null,
       collectionAddress,
     )
-  }, [account, library, collectionAddress, withSignerIfPossible])
+  // }, [account, library, collectionAddress, withSignerIfPossible])
+  }, [collectionAddress, withSignerIfPossible])
 }
 
 // Code below migrated from Exchange useContract.ts
@@ -247,12 +249,14 @@ function useContract(address: string | undefined, ABI: any, withSignerIfPossible
   return useMemo(() => {
     if (!address || !ABI || !library) return null
     try {
-      return getContract(address, ABI, withSignerIfPossible ? getProviderOrSigner(library, account) : null)
+      // return getContract(address, ABI, withSignerIfPossible ? getProviderOrSigner(library, account) : null)
+      return null
     } catch (error) {
       console.error('Failed to get contract', error)
       return null
     }
-  }, [address, ABI, library, withSignerIfPossible, account])
+  // }, [address, ABI, library, withSignerIfPossible, account])
+  }, [ABI, library, address])
 }
 
 export function useTokenContract(tokenAddress?: string, withSignerIfPossible?: boolean): Contract | null {

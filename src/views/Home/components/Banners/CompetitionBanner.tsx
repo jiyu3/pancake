@@ -84,38 +84,38 @@ const ImageWrapper = styled.div`
   }
 `
 
-const CompetitionBanner = () => {
-  const { t } = useTranslation()
-  const { isDesktop } = useMatchBreakpoints()
+// const CompetitionBanner = () => {
+//   const { t } = useTranslation()
+//   const { isDesktop } = useMatchBreakpoints()
 
-  return (
-    <Wrapper>
-      <Inner>
-        <ImageWrapper>
-          <img
-            src={isDesktop ? '/images/competition/banner.png' : '/images/competition/banner_sm.png'}
-            alt="Trading Competition bunny"
-          />
-        </ImageWrapper>
-        <RightWrapper>
-          <Flex flexDirection="column" justifyContent="center">
-            <StyledSubheading>{t('Binance Fan Token Trading Competition')}</StyledSubheading>
-            <StyledHeading mb={0} scale="xl">
-              {t('$120,000 in Prizes!')}
-            </StyledHeading>
-          </Flex>
-          <Link to="/competition">
-            <Button>
-              <Text color="invertedContrast" bold fontSize="16px" mr="4px">
-                {t('Trade Now')}
-              </Text>
-              <ArrowForwardIcon color="invertedContrast" />
-            </Button>
-          </Link>
-        </RightWrapper>
-      </Inner>
-    </Wrapper>
-  )
-}
+//   return (
+//     <Wrapper>
+//       <Inner>
+//         <ImageWrapper>
+//           <img
+//             src={isDesktop ? '/images/competition/banner.png' : '/images/competition/banner_sm.png'}
+//             alt="Trading Competition bunny"
+//           />
+//         </ImageWrapper>
+//         <RightWrapper>
+//           <Flex flexDirection="column" justifyContent="center">
+//             <StyledSubheading>{t('Binance Fan Token Trading Competition')}</StyledSubheading>
+//             <StyledHeading mb={0} scale="xl">
+//               {t('$120,000 in Prizes!')}
+//             </StyledHeading>
+//           </Flex>
+//           <Link to="/competition">
+//             <Button>
+//               <Text color="invertedContrast" bold fontSize="16px" mr="4px">
+//                 {t('Trade Now')}
+//               </Text>
+//               <ArrowForwardIcon color="invertedContrast" />
+//             </Button>
+//           </Link>
+//         </RightWrapper>
+//       </Inner>
+//     </Wrapper>
+//   )
+// }
 
-export default CompetitionBanner
+// export default CompetitionBanner

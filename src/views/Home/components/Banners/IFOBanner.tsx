@@ -87,30 +87,30 @@ const RightWrapper = styled.div`
   }
 `
 
-const IFOBanner = () => {
-  const { t } = useTranslation()
+// const IFOBanner = () => {
+//   const { t } = useTranslation()
 
-  return (
-    <Wrapper>
-      <Inner>
-        <LeftWrapper>
-          <StyledSubheading>{t('Live')}</StyledSubheading>
-          <StyledHeading scale="xl">SANTOS IFO</StyledHeading>
-          <Link to="/ifo">
-            <Button>
-              <Text color="invertedContrast" bold fontSize="16px" mr="4px">
-                {t('Go to IFO')}
-              </Text>
-              <ArrowForwardIcon color="invertedContrast" />
-            </Button>
-          </Link>
-        </LeftWrapper>
-        <RightWrapper>
-          <img src="/images/decorations/3d-ifo-santos.png" alt="IFO SANTOS" />
-        </RightWrapper>
-      </Inner>
-    </Wrapper>
-  )
-}
+//   return (
+//     <Wrapper>
+//       <Inner>
+//         <LeftWrapper>
+//           <StyledSubheading>{t('Live')}</StyledSubheading>
+//           <StyledHeading scale="xl">SANTOS IFO</StyledHeading>
+//           <Link to="/ifo">
+//             <Button>
+//               <Text color="invertedContrast" bold fontSize="16px" mr="4px">
+//                 {t('Go to IFO')}
+//               </Text>
+//               <ArrowForwardIcon color="invertedContrast" />
+//             </Button>
+//           </Link>
+//         </LeftWrapper>
+//         <RightWrapper>
+//           <img src="/images/decorations/3d-ifo-santos.png" alt="IFO SANTOS" />
+//         </RightWrapper>
+//       </Inner>
+//     </Wrapper>
+//   )
+// }
 
-export default IFOBanner
+// export default IFOBanner

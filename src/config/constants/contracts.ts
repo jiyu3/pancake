@@ -4,10 +4,10 @@ export default {
     56: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
     81: '0xe40fa69723A68bBF9DFdE9822eeDf4693ec08f56',
   },
-  sousChef: {
-    97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
-    56: '0x6ab8463a4185b80905e05a9ff80a2d6b714b9e95',
-  },
+  // sousChef: {
+  //   97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
+  //   56: '0x6ab8463a4185b80905e05a9ff80a2d6b714b9e95',
+  // },
   lotteryV2: {
     97: '0x5790c3534F30437641541a0FA04C992799602998',
     56: '0x5aF6D33DE2ccEC94efb1bDF8f92Bd58085432d2c',

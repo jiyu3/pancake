@@ -81,30 +81,30 @@ const RightWrapper = styled.div`
   }
 `
 
-const FarmAuctionsBanner = () => {
-  const { t } = useTranslation()
+// const FarmAuctionsBanner = () => {
+//   const { t } = useTranslation()
 
-  return (
-    <Wrapper>
-      <Inner>
-        <LeftWrapper>
-          <StyledSubheading>{t('%num% Contenders...', { num: 13 })}</StyledSubheading>
-          <StyledHeading scale="xl">{t('%num% Winners', { num: 3 })}</StyledHeading>
-          <Link to="/farms/auction">
-            <Button>
-              <Text color="invertedContrast" bold fontSize="16px" mr="4px">
-                {t('Farm Auctions')}
-              </Text>
-              <ArrowForwardIcon color="invertedContrast" />
-            </Button>
-          </Link>
-        </LeftWrapper>
-        <RightWrapper>
-          <img src="/images/decorations/auction-bunny.png" alt={t('auction bunny')} />
-        </RightWrapper>
-      </Inner>
-    </Wrapper>
-  )
-}
+//   return (
+//     <Wrapper>
+//       <Inner>
+//         <LeftWrapper>
+//           <StyledSubheading>{t('%num% Contenders...', { num: 13 })}</StyledSubheading>
+//           <StyledHeading scale="xl">{t('%num% Winners', { num: 3 })}</StyledHeading>
+//           <Link to="/farms/auction">
+//             <Button>
+//               <Text color="invertedContrast" bold fontSize="16px" mr="4px">
+//                 {t('Farm Auctions')}
+//               </Text>
+//               <ArrowForwardIcon color="invertedContrast" />
+//             </Button>
+//           </Link>
+//         </LeftWrapper>
+//         <RightWrapper>
+//           <img src="/images/decorations/auction-bunny.png" alt={t('auction bunny')} />
+//         </RightWrapper>
+//       </Inner>
+//     </Wrapper>
+//   )
+// }
 
-export default FarmAuctionsBanner
+// export default FarmAuctionsBanner

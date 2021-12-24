@@ -16,7 +16,7 @@ import Footer from './components/Footer'
 import CakeDataRow from './components/CakeDataRow'
 import { WedgeTopLeft, InnerWedgeWrapper, OuterWedgeWrapper, WedgeTopRight } from './components/WedgeSvgs'
 import UserBanner from './components/UserBanner'
-import CompetitionBanner from './components/Banners/CompetitionBanner'
+// import CompetitionBanner from './components/Banners/CompetitionBanner'
 
 const StyledHeroSection = styled(PageSection)`
   padding-top: 16px;
@@ -66,13 +66,13 @@ const Home: React.FC = () => {
             <UserBanner />
           </UserBannerWrapper>
         )}
-        <Flex
+        {/* <Flex
           pt={[account ? '220px' : '0', null, null, account ? '76px' : '0']}
           mt={[account ? '0' : '-16px', null, null, account ? '0' : '-48px']}
           pb="24px"
         >
           <CompetitionBanner />
-        </Flex>
+        </Flex> */}
         <Hero />
       </StyledHeroSection>
       <PageSection
